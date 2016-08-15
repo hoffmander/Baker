@@ -1,5 +1,5 @@
 # Baker
 A middleman starter theme
-* Built using Atomic Design
+* Built on Atomic Design theroy 
 * Custom girds with Flexbox
 * Yay
