@@ -20,7 +20,11 @@ page '/*.txt', layout: false
 
 # Reload the browser automatically whenever files change
 configure :development do
+  # Use Live Reload
   activate :livereload
+
+  # Use pretty URLs
+  activate :directory_indexes
 end
 
 ###
