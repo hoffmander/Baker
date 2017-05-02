@@ -1,5 +1,47 @@
-.blue-box {
-	background-color: blue;
-	height: 300px;
-	width: 300px;
+.wrapper {
+	@include container;
+}
+
+.sg-section {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: ceneter;
+	flex-wrap: wrap;
+}
+
+.sg-color {
+	padding: 60px;
+	color: $white;
+}
+
+.sg-black {
+	background: $black;
+}
+.sg-gray-dark {
+	background: $gray-dark;
+}
+.sg-gray {
+	background: $gray;
+}
+.sg-gray-light {
+	background: $gray-light;
+}
+.sg-gray-lightest {
+	background: $gray-lightest;
+}
+.sg-blue-darker {
+	background: $blue-darker;
+}
+.sg-blue-dark {
+	background: $blue-dark;
+}
+.sg-blue {
+	background: $blue;
+}
+.sg-blue-light {
+	background: $blue-light;
+}
+.sg-yellow {
+	background: $yellow;
 }

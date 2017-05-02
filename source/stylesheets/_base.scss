@@ -1,0 +1,50 @@
+// Base
+$blueprint-grid-columns: 12;
+$blueprint-grid-width:   30px;
+$blueprint-grid-margin:  10px;
+$font-color:             blue;
+$base-font-size:         16px;
+$base-line-height:       22px;
+
+// Colors
+$blue-darker:   #262683;
+$blue-dark:     #0000BF;
+$blue:          #1E35FF;
+$blue-light:    #80A8FF;
+$yellow:        #FFC632;
+$black:         #212122;
+$gray-dark:     #3C3C41;
+$gray:          #676773;
+$gray-light:    #D5DAE7;
+$gray-lightest: #EFF1F6;
+$white:         #FFFFFF;
+
+@mixin container {
+  max-width: 1140px;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0 auto;
+  &:after,
+  &:before {
+    content: " ";
+    display: table;
+  }
+}
+
+@mixin breakpoint($point) {
+   @if $point == desktop {
+     @media (min-width: 70em) { @content ; }
+  }
+   @else if $point == laptop {
+     @media (min-width: 64em) { @content ; }
+  }
+    @else if $point == tablet {
+     @media (min-width: 50em) { @content ; }
+  }
+   @else if $point == phablet {
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly {
+     @media (max-width: 37.5em)  { @content ; }
+  }
+}
