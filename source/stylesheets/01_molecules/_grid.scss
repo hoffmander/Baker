@@ -1,0 +1,44 @@
+$neat-grid: (
+  columns: 12,
+  gutter: 24px,
+);
+
+$custom-neat-grid: (
+  columns: 12,
+  gutter: 16px,
+  media: "(min-width: 768px)",
+);
+
+
+.container {
+	max-width: 100%;
+	margin: 0 auto;
+	@include grid-visual;
+  @include grid-column(12);  
+  @include grid-media($custom-neat-grid){
+    @include grid-column(12);
+  }
+}
+
+
+// $neat-grid: (
+//   columns: 12,
+//   gutter: 20px,
+// );
+
+// $neat-grid-md: (
+//   columns: 6,
+//   gutter: 16px,
+//   media: "(min-width: 768px)",
+// );
+
+// .container {
+// 	max-width: 100%;
+// 	margin: 0 auto;
+// 	@include grid-container;
+// 	@include grid-visual;
+// 	@include grid-media($neat-grid-md){
+// 	  @include grid-column(6);
+// 	}
+// }
+
